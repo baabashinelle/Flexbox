@@ -10,7 +10,7 @@ body {
   width: 100%;
   margin: auto;
 }
-.option-row {
+.card-row {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -20,7 +20,7 @@ body {
   margin: auto;
   position: relative;
 }
-.option {
+.card {
   flex-grow: 1;
   display: block;
   padding: 0.5em;
@@ -39,14 +39,14 @@ body {
   transition-property: flex-grow, opacity;
   transition-timing-function: cubic-bezier(0.98, 0, 0.22, 0.98), ease-in-out;
 }
-.option:before,
-.option:after {
+.card:before,
+.card:after {
   content: '';
   display: block;
   border: solid 2px #64D6EE;
   visibility: visible;
 }
-.option:before {
+.card:before {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
@@ -54,20 +54,20 @@ body {
   width: 0.25em;
   height: 0.25em;
 }
-.option:after {
+.card:after {
   width: 100%;
   transform-origin: 0 0;
   transform: scaleX(0.2);
   transition: inherit;
   transition-property: transform, opacity;
 }
-.option-input {
+.card-input {
   position: absolute;
   top: 0;
   z-index: -1;
   opacity: 0;
 }
-.option__label {
+.card__label {
   display: inline-block;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -77,22 +77,22 @@ body {
   transition: inherit;
   transition-property: transform, opacity;
 }
-.option__label sub {
+.card__label sub {
   margin-left: 0.25em;
   font-size: 0.4em;
   display: inline-block;
   vertical-align: 0.3em;
 }
-.option-input:checked + .option {
+.card-input:checked + .card {
   flex-grow: 4;
   opacity: 1;
 }
-.option-input:checked + .option::after {
+.card-input:checked + .card::after {
   transform: scaleX(1);
 }
-.option-input:checked + .option::before {
+.card-input:checked + .card::before {
   background: #64D6EE;
 }
-.option-input:checked + .option .option__label {
+.card-input:checked + .card .card__label {
   transform: scale(1);
 }
