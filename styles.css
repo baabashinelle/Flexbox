@@ -9,7 +9,7 @@
 html {
   display: flex;
   height: 100%;
-  font-size: 62.5%;
+  font-size: 62.5%; /* reset font-size */
   background: linear-gradient(to bottom, #7095f1, #7ce7fc);
 }
 body {
